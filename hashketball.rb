@@ -239,7 +239,6 @@ def big_shoe_rebounds
             end
             if stat == :rebounds
               largest_shoe_rebounds = value 
-            
             end
           end
         end
@@ -249,8 +248,72 @@ def big_shoe_rebounds
   largest_shoe_rebounds
 end
     
+arr1 = [5,4,7,8,12,11,5]
+arr2 = [4, 22, 8, 5, 6]
+
+
   
   
+def duplicates(arr1, arr2)
+  arr1.uniq!
+  arr2.uniq!
+  duplicate_nums = []
+  arr1.each do |number1|
+    arr2.each do |number2|
+      if number1 == number2
+        duplicate_nums << number1
+      end
+    end
+  end
+  duplicate_nums
+end
   
+# y = duplicates(arr1, arr2)
+# puts y
+
+def duplicates_2(arr1, arr2)
+  arr1.uniq!
+  arr2.uniq!
+  num_hash = {}
+  num_arr = []
+  arr= arr1 + arr2
+  arr.each do |number|
+    if !num_hash.keys.include?(number)
+      num_hash[number] = 1
+    else
+      num_hash[number] = num_hash[number] += 1
+    end
+  end
   
+  num_hash.each do |key, value|
+    if value == 2 
+      num_arr << key
+    end
+  end
+  num_arr
+end
+
+# y = duplicates_2(arr1, arr2)
+# puts y
+
+
+arr = [0, 2, 3, 4, 5, 6, 7, 8, 9]
+
+def missing_num(arr)
+  arr-my_arr
+    
+      
+end 
+
+
+y = missing_num(arr)
+puts y
+
+
+hash = {:christoph => 37}
+
+hash[:christoph] = 30
+
+
+
 
